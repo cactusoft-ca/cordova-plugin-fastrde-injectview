@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-injectview",
+  "version": "0.2.0",
+  "description": "Injects Cordova and Plugins directly into the View.",
+  "main": "www/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cactusoft-ca/phonegap-plugin-injectview.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cactusoft-ca/phonegap-plugin-injectview/issues"
+  },
+  "homepage": "https://github.com/cactusoft-ca/phonegap-plugin-injectview#readme"
+}
