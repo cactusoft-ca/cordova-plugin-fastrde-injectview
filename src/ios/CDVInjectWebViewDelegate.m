@@ -50,12 +50,11 @@
     [super webViewDidFinishLoad:theWebView];
     if (--self.webViewLoads == 0){
         NSArray* pluginObjects = [self parseCordovaPlugins];
-        
+        if ([theWebView.request.mainDocumentURL isEqualToString:@"file:///android_asset/www/index.html"]) return;
         NSLog(@"injecting cordova %@", pluginObjects);
         
         [self injectJavascriptFile:@"www/cordova" intoWebView:theWebView];
         [self injectJavascriptFile:@"www/cordova_plugins" intoWebView:theWebView];
-        //[self injectJavascriptFile:@"www/plugins/de.fastr.phonegap.plugins.injectView/www/inject"  intoWebView:theWebView];
         
         for (NSDictionary* pluginParameters in pluginObjects) {
             NSString* file = pluginParameters[@"file"];
@@ -64,7 +63,6 @@
             path = [path stringByDeletingPathExtension];
             [self injectJavascriptFile:path intoWebView:theWebView];
         }
-        [self injectJavascriptFile:@"www/js/index" intoWebView:theWebView];
     }
     NSDictionary *userInfo = @{@"webView" : theWebView};
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];

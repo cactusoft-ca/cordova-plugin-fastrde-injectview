@@ -14,7 +14,7 @@
 		<source-file src="src/android/Inject.java" target-dir="src/de/fastr/phonegap/plugins" />
 		<source-file src="src/android/engine/Injecter.java" target-dir="src/de/fastr/phonegap/plugins" />
 		<source-file src="src/android/engine/InjectWebView.java" target-dir="src/de/fastr/phonegap/plugins" />
-    <source-file src="src/android/engine/InjectWebViewClient.java" target-dir="src/de/fastr/phonegap/plugins" />
+		<source-file src="src/android/engine/InjectWebViewClient.java" target-dir="src/de/fastr/phonegap/plugins" />
 		<source-file src="src/android/engine/InjectWebViewEngine.java" target-dir="src/de/fastr/phonegap/plugins" />
 
  		<config-file target="res/xml/config.xml" parent="/*">
